@@ -1,0 +1,225 @@
+@keyframes slidein{
+    0%{
+        margin-top: 150%;
+    }
+
+    60%{
+        margin-top: -5%;
+    }
+
+    100%{
+        margin-top: 0%;
+    }
+}
+
+body{
+    font-family: 'Dancing Script', cursive;
+    background-color: black;
+}
+
+#contenido{
+    max-width: 900px;
+    align-items: center;
+    margin: auto;
+    animation-name: slidein;
+	animation-duration: 0.5s;
+}
+/* Aqui inicia el disenio del header */
+#cabecera{
+    background-color:  #5b7989;
+    border-radius: 10px 10px 0px 0px;
+    display:flex;
+    flex-direction:row;
+}
+
+#titulo{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px black;
+    margin: auto;
+}
+
+#lista-menu{
+    text-align: right;
+    margin: auto;
+}
+
+#lista-menu a:link, a:visited{
+    color: white;
+}
+
+.subrayado{
+    text-decoration: none;
+}
+/* aqui finaliza el header de la pagina */
+
+/* Aqui inicia el disenio de la imagen centrada del index */
+#imagen-central{
+    background-color: #82c3a6;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+#imagen-central img{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    box-shadow: 2px 2px #02010a;
+}
+/* Aqui finaliza el disenio de la imagen centrada del index */
+
+/* Aqui inicia el disenio imagen secundaria del index */
+#imagen-dividida{
+    background-color:  #d5c75f;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#contenedor1{
+    width: 50%;
+    text-align: center;
+}
+
+#imagen-dividida div h3 a:link{
+    color: black;
+}
+
+#imagen-dividida div h3 a:visited{
+    color: black;
+}
+
+#contenedor1 img{
+    transition-property: transform, box-shadow, border;
+    transition-duration: 0.5s;
+}
+
+#contenedor1 img:hover{
+    border: 2px solid black;
+    box-shadow: 2px 2px #82c3a6;
+    transform: rotate(10deg);
+}
+
+#contenedor2{
+    width: 50%;
+    text-align: center;
+}
+
+#contenedor2 img{
+    transition-property: transform, box-shadow, border;
+    transition-duration: 0.5s;
+}
+
+#contenedor2 img:hover{
+    border: 2px solid black;
+    box-shadow: 2px 2px #82c3a6;
+    transform: translate(20px, -10px);
+}
+
+.ajustar-padding{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ajustar-imagen{
+    width: 80%;
+    box-shadow: 2px 2px #02010a;
+}
+/* Aqui finaliza el disenio imagen secundaria del index */
+/* Aqui inicia el disenio del footer */
+#pies{
+    border-radius: 0px 0px 10px 10px;
+    background-color: #C6d5c5;
+    display: flex;
+    justify-content: space-around;
+    align-items: justify;
+    width: 100%;
+    margin: auto;
+}
+/* aqui finaliza el disenio del footer */
+
+/* aqui inicia el disenio del contenido de paisajes y retratos */
+#galeria{
+    width: 100%;
+    background-color: #d5c75f;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: auto;
+}
+
+#galeria article div img{
+    margin: 4%;
+    width: 25%;
+    box-shadow: 2px 2px #02010a;
+}
+
+#galeria article #superior img:nth-child(1){
+    -webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+
+#galeria article #superior img:nth-child(2){
+    -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+#galeria article #superior img:nth-child(3){
+    -webkit-filter: sepia(90%);
+	filter: sepia(90%);
+}
+
+#galeria article #inferior img:nth-child(1){
+    -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+#galeria article #inferior img:nth-child(3){
+    -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+/* Aqui finaliza el disenio del contenido de paisajes y retratos */
+
+/* MEDIA QUERIES para el disenio responsive */
+
+/* Media querie para desktop */
+@media screen and (max-width:900px){
+    #contenido{
+        max-width: 900px;
+    }
+
+    #cabecera{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        padding-bottom: 20px;
+    }
+
+    #imagen-dividida{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+    }
+
+    #galeria{
+        display:flex;
+        flex-direction:column;
+    }
+
+    #galeria article div img{
+        margin: 5% 0% 5% 15%;
+        width: 70%;
+        box-shadow: 2px 2px #02010a;
+    }
+
+    #pies{
+        width: 80%;
+        flex-direction: column;
+        align-items: justify;
+        display: flex;
+        padding-left: 20%;
+    }
+}
